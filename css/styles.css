@@ -1,0 +1,243 @@
+html{
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+	box-sizing: inherit;
+}
+@font-face {
+	font-family: "Lato";
+	src: url("../fonts/Lato-Regular.woff2") format("woff2"),
+	url("../fonts/Lato-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Comfortaa";
+	src: url("../fonts/Comfortaa-Regular.woff2") format("woff2"),
+	url("../fonts/Comfortaa-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+body{
+	font-family: "Lato", "Arial", sans-serif;
+}
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+.site__header{
+	padding: 80px;
+	text-align: center;
+	font-family: "Comfortaa";
+	background-image: url("../img/chef-icon.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.site__heading{
+	margin: 0;
+	font-size: 60px;
+}
+.site__heading__text{
+	margin: 0;
+	font-size: 15px;
+}
+.sitenav__menu{
+	display: flex;
+	margin: 20px 0;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+}
+.sitenav__menu a:hover{
+	background-color: #efefef;
+	color: black;
+}
+.sitenav__link{
+	flex-grow: 1;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 0.4s ease;
+	color: black;
+}
+.site__list{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 30px 10px;
+	justify-content: space-between;
+	list-style-type: none;
+}
+.site__items{
+	width: 370px;
+	margin: 20px 0;
+}
+.site__items:hover{
+	opacity: 0.8;
+}
+.site__items__main-link{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: black;
+}
+.site__items:hover .site__items__main-link{
+	color: #ec4d4a;
+}
+.site__items__link{
+	display: inline-block;
+	padding: 7px 12px;
+	margin: 7px 0;
+	font-size: 13px;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.site__items__link:hover{
+	opacity: 0.7;
+}
+.site__items__text{
+	margin: 0;
+}
+.site__items__link--orange{
+	background-color: #f0932b;
+}
+.site__items__link--blue{
+	background-color: #7ed7df;
+}
+.site__items__link--pink{
+	background-color: #ff7978;
+}
+.site__items__link--green{
+	background-color: #bbdc59;
+}
+.site__link--pink{
+	background-color: #ff7978;
+}
+.site__list__down{
+	width: 100%;
+	margin: 40px auto;
+	display: flex;
+	justify-content: center;
+	text-align-last: center;
+}
+.site__list__down__link{
+	padding: 20px 40px;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	border: 4px solid #eb4d4a;
+	color: #eb4d4a;
+	transition:	background-color 1s ease,
+	color 1s ease;
+}
+.site__list__down__link:hover{
+	background-color: #eb4d4a;
+	color: white;
+}
+.site__main__footer{
+	width: 100%;
+	background-image: url("../img/foods.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.site__main__footer__links{
+	display: flex;
+	width: 850px;
+	margin: 0 auto;
+	padding-top: 150px;
+	justify-content: space-between;
+}
+.site__main__footer__input{
+	padding: 20px;
+	padding-right: 300px;
+	font-weight: bold;
+	border: none;
+}
+.site__main__footer__input:hover{
+	opacity: 0.7;
+}
+.site__main__footer__links__link{
+	padding: 20px 70px;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+	background-color: #eb4d4a;
+}
+.site__main__footer__links__link:hover{
+	opacity: 0.7;
+}
+.site__main__footer__text{
+	margin: 100px auto;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+}
+.site__adresses{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.site__adresses__link{
+	display: flex;
+	margin: 0 10px;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+	transform: translate(0px);
+	transition: 0.3s ease;
+}
+.site__adresses__link:hover{
+	text-shadow: 0 0 10px black;
+	transform: translate(0px, -5px);
+}
+@media (max-width: 960px) {
+	.container{
+		width: 850px;
+	}
+}
+@media (max-width: 700px) {
+	.container{
+		width: 650px;
+		margin: 0 auto;
+	}
+	.sitenav__menu{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.sitenav__link{
+		text-align: left;
+	}
+	.site__items{
+		width: 100%;
+	}
+	.site__items__img{
+		width: 100%;
+		object-fit: cover;
+	}
+	.site__main__footer{
+		padding: 20px;
+	}
+	.site__main__footer__links{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.site__main__footer__input{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.site__main__footer__links__link{
+		margin: 0 auto;
+		padding: 20px;
+		text-align: center;
+	}
+}
